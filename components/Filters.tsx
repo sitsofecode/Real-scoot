@@ -19,7 +19,7 @@ const Filters = () => {
 
     }
     return (
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerClassName='pr-0 mt-4'>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerClassName='pr-0 mt-5'>
             {categories.map((item, index) => (
                 < TouchableOpacity key={index} onPress={() => handleChangeCategory(item.category)} className={`px-4 mr-5 py-2 rounded-full border border-primary-200 ${selected === item.category ? 'bg-primary-300' : 'bg-primary-100'}`}>
                     <Text className={`${selected === item.category ? 'text-white' : 'text-black-300'} font-rubiklight text-md`}>{item.title}</Text></TouchableOpacity>
