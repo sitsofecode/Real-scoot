@@ -47,7 +47,7 @@ export default function Index() {
             <ActivityIndicator size="large" className="text-primary-300" />
             : <EmptyPage />}
           renderItem={({ item }) => (
-            <Card item={item} onPress={() => handleCardPress} />)}
+            <Card item={item} onPress={() => handleCardPress(item.$id)} />)}
 
           ListHeaderComponent={
             () => (
@@ -81,8 +81,7 @@ export default function Index() {
                         keyExtractor={(item) => item.$id}
                         bounces={false}
                         contentContainerClassName="flez flex-row gap-4 "
-                        renderItem={({ item }) => <FeatureCards item={item} onPress={() => console.log('clicked')
-                        } />}
+                        renderItem={({ item }) => <FeatureCards item={item} onPress={() => handleCardPress(item.$id)} />}
                       />
 
                     </View>

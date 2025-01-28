@@ -13,8 +13,7 @@ interface Props {
 
 export const FeatureCards = ({ item, onPress }: Props) => {
     return (
-        <TouchableOpacity onPress={() => (console.log('clicked')
-        )} className='relative  flex flex-col w-60 , h-72 rounded-2xl '>
+        <TouchableOpacity onPress={onPress} className='relative  flex flex-col w-60 , h-72 rounded-2xl '>
             <Image source={{
                 uri: item.
                     image
@@ -23,7 +22,7 @@ export const FeatureCards = ({ item, onPress }: Props) => {
             <View className='bg-white/80 rounded-full flex flex-row items-center absolute top-5 right-5 px-2 p-1'>
                 <Image source={icons.star} />
                 <Text className='text-primary-300 font-rubikBold ml-2 text-xl'>
-                    $  {item.rating}
+                    {item.rating}
                 </Text>
             </View>
             <View className='absolute bottom-5  px-5 flex flex-row justify-between w-full'>
@@ -35,7 +34,7 @@ export const FeatureCards = ({ item, onPress }: Props) => {
                         {item.address}
                     </Text>
                     <Text className='text-white font-rubikBold text-2xl'>
-                        {item.price}
+                        $ {item.price}
                     </Text>
                 </View>
                 <Image source={icons.heart} className='size-6 absolute bottom-0 right-5' />
